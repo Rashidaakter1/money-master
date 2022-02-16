@@ -38,8 +38,13 @@ document.getElementById('save-btn').addEventListener('click',function(){
     const incomeInput = document.getElementById('income-input');
     const incomeInputNumber=parseFloat(incomeInput.value);
 
+    const inputPercentage = document.getElementById('input-percentage');
+    const inputPercentageNumber = parseFloat(inputPercentage.value);
+    const percentage = inputPercentageNumber/100;
+
+
     const savingAmount =document.getElementById('saving-amount');
-    const savingAmountInput = incomeInputNumber*.2;
+    const savingAmountInput = incomeInputNumber*percentage;
     savingAmount.innerText=savingAmountInput;
 
 

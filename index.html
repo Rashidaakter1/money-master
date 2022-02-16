@@ -12,26 +12,28 @@
 
 </head>
 <body>
-    <header>
-       <h1 class="fs-1 fw-bold text-center text-capitalize mt-5"> Financial Balance sheet</h1>
+    <header class="mb-5">
+       <h1 class="fs-1 fw-bold text-center text-capitalize mt-5 text-success
+
+       "> Financial Balance sheet</h1>
     </header>
 
-    <main>
+    <main >
         <!-- image and input field -->
         <section>
             <div class="container">
-                <div class="row gx-5">
+                <div class="row gx-5 gy-5">
                     <div class="col-lg-7 col-sm-12">
                         <img class="img-fluid " src="image/balance.jpg" alt="">
                     </div>
                     <!-- input field -->
                     <div class="col-lg-5 col-sm-12">
-                    <h2>Income</h2>
+                    <h2 class="text-secondary">Income</h2>
                     <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-lg ">Income:</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" id="income-input" aria-describedby="inputGroup-sizing-lg" >
                     </div>
-                    <h2>Expenses</h2>
+                    <h2 class="text-center mb-4 text-secondary">Expenses</h2>
                     <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-lg">Food:</span>
                         <input type="text"id="food-input"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
@@ -50,37 +52,50 @@
                         <br>
 
                         <!-- button calculate -->
-                         <div class="d-flex  justify-content-center">
+                         <div class="d-flex  justify-content-center mb-4">
                             <button id="calc-btn"
                             class="bg-primary px-4
-                            py-2 ">Calculate</button>
+                            py-2 rounded-3 text-white fw-bold">Calculate</button>
                          </div>
 
                          <!-- total expenses and balance -->
 
-                         <div class="text-center mb-2">
-                          <h2>Total Expenses: <span id="expenses">00.00</span></h2>
-                          <h2>Balance: <span id="balance">00.00</span></h2>
+                         <div class="text-center mb-4">
+                          <h2 class="text-secondary">Total Expenses: <span id="expenses">00.00</span></h2>
+                          <h2 class="text-secondary">Balance: <span id="balance">00.00</span></h2>
                         </div>
 
                         <!-- save percentage and click handle  -->
+                        <div class="container mb-4">
+                            <div class="row">
+                              <div class="col-lg-3 fs-3 col-sm-3">
+                               save:
+                              </div>
+                              <div class="col-lg-3 col-sm-3">
+                               <input class="w-100" type="text" name="" id="input-percentage">
+                              </div>
+                              <div class="col-lg-3 col-sm-3">
+                                %
+                              </div>
+                              <div class="col-lg-3 col-sm-3">
 
-                        <div class="input-group">
-                            <span id="inputGroup-sizing-lg" class="input-group-text">Save</span>
-                            <span class="input-group-text">20</span>
-                            <span class="input-group-text">%</span>
-                            <button id="save-btn"
-                            class="bg-primary px-4
-                            py-2 ">Save</button>
+                                 <!-- save button -->
+
+                                <button id="save-btn"
+                                class="bg-primary px-4
+                                rounded-3 text-white fw-bold">Save</button>
+                              </div>
+                            </div>
                           </div>
 
-                        <!-- saving amount and remaining balance -->
-                        <div class="text-center mb-2">
-                            <h2>Saving Amount: <span id="saving-amount" >00.00</span>
+                           <!-- saving amount and remaining balance -->
+
+                        <div class="text-center mb-4
+                        ">
+                            <h2 class="text-secondary">Saving Amount: <span id="saving-amount" >00.00</span>
                             </h2>
-                            <h2>Remaining Balance:<span id="remaining-balance">00.00</span></h2>
-                          </div>
-
+                            <h2 class="text-secondary">Remaining Balance:<span id="remaining-balance">00.00</span></h2>
+                        </div>
                     </div>
                   
                 </div>
@@ -90,7 +105,7 @@
             
         </section>
 
-                 <!-- total expenses and balance -->
+                
 
     </main>
 
