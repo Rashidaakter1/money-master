@@ -28,23 +28,23 @@
                     <div class="col-lg-5 col-sm-12">
                     <h2>Income</h2>
                     <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-lg">Income:</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        <span class="input-group-text" id="inputGroup-sizing-lg ">Income:</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" id="income-input" aria-describedby="inputGroup-sizing-lg" >
                     </div>
                     <h2>Expenses</h2>
                     <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-lg">Food:</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        <input type="text"id="food-input"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                     </div>
                 
                     <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-lg">Rent:</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        <input type="text" id="rent-input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                     </div>
                     
                     <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-lg">Cloths:</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        <input type="text" id="cloths-input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                         
                     </div>
                         <br>
@@ -59,8 +59,8 @@
                          <!-- total expenses and balance -->
 
                          <div class="text-center mb-2">
-                          <h2>Total Expenses: <span>5500</span></h2>
-                          <h2>Balance: <span>4500</span></h2>
+                          <h2>Total Expenses: <span id="expenses">00.00</span></h2>
+                          <h2>Balance: <span id="balance">00.00</span></h2>
                         </div>
 
                         <!-- save percentage and click handle  -->
@@ -76,9 +76,9 @@
 
                         <!-- saving amount and remaining balance -->
                         <div class="text-center mb-2">
-                            <h2>Saving Amount: <span>2000</span>
+                            <h2>Saving Amount: <span id="saving-amount" >00.00</span>
                             </h2>
-                            <h2>Remaining Balance:<span>2500</span></h2>
+                            <h2>Remaining Balance:<span id="remaining-balance">00.00</span></h2>
                           </div>
 
                     </div>
