@@ -1,19 +1,26 @@
-//justify input number or string
+//justify input number positive or negative
 
 function isInputNumber(input){
     const Input =document.getElementById(input +'-input');
-    const inputNumberOrString = Input.value;
-    if(typeof inputNumberOrString != 'number'){
+    const inputNumbercheck = Input.value;
+    if(parseFloat(inputNumbercheck) <= 0){
         
         const numberCheck = document.getElementById('number-check');
-        numberCheck.style.display='visible';
+        numberCheck.style.display='block';
+        return numberCheck;
         
+    }
+    else {
+
+        const numberCheck = document.getElementById('number-check');
+        numberCheck.style.display='none';
+        return numberCheck;
     }
    
 }
 //input function
-function getInput(product){
-    const input = document.getElementById(product +'-input');
+function getInput(inputId){
+    const input = document.getElementById(inputId +'-input');
     const inputNumber =parseFloat(input.value);
     return inputNumber;
     
@@ -54,8 +61,29 @@ document.getElementById('calc-btn').addEventListener('click',function(){
     const balance = document.getElementById('balance');
     balance.innerText= balanceInput;
 
+    // balance check  
+
+    isBalanceismore()
+    function isBalanceismore (){
+        if(expensesInput>getInput('income')){
+            const balanceCheck = document.getElementById('balance-check');
+             balanceCheck.style.display='block';
+             balance.innerText='';
+             return balanceCheck;
+         }
+         else{
+            const balanceCheck = document.getElementById('balance-check');
+            balanceCheck.style.display='none';
+            return balanceCheck;
+         }
+
+     
+    }
+
+    
 
 });
+
 
 //save btn add event lisener
 
@@ -74,7 +102,6 @@ document.getElementById('save-btn').addEventListener('click',function(){
     const savingAmountInput = incomeInputNumber*percentage;
     savingAmount.innerText=savingAmountInput;
 
-
     //remaining amount
 
     const balance = document.getElementById('balance');
@@ -85,6 +112,27 @@ document.getElementById('save-btn').addEventListener('click',function(){
     console.log(remainingAmountNumber);
     const remainingAmount = document.getElementById('remaining-balance');
     remainingAmount.innerText=remainingAmountNumber;
+
+
+    //saving will not more than balance
+    isSavingCan()
+    function isSavingCan (){
+        if(savingAmountInput>balanceNumber){
+            const savingCheck = document.getElementById('saving-check');
+             savingCheck.style.display='block';
+             savingAmount.innerText='';
+             remainingAmount.innerText='';
+
+             return savingCheck;
+         }
+         else{
+            const savingCheck = document.getElementById('saving-check');
+            savingCheck.style.display='none';
+            return savingCheck;
+         }
+
+    }
+
 
 })
 
