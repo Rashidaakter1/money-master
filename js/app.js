@@ -1,29 +1,56 @@
+//justify input number or string
+
+function isInputNumber(input){
+    const Input =document.getElementById(input +'-input');
+    const inputNumberOrString = Input.value;
+    if(typeof inputNumberOrString != 'number'){
+        
+        const numberCheck = document.getElementById('number-check');
+        numberCheck.style.display='visible';
+        
+    }
+   
+}
+//input function
+function getInput(product){
+    const input = document.getElementById(product +'-input');
+    const inputNumber =parseFloat(input.value);
+    return inputNumber;
+    
+}
+
+
 document.getElementById('calc-btn').addEventListener('click',function(){
-   const incomeInput = document.getElementById('income-input');
-   const incomeInputNumber=parseFloat(incomeInput.value);
+ 
+ //input value is number or string check   
+
+    isInputNumber("income")
+    isInputNumber("food")
+    isInputNumber("rent")
+    isInputNumber("cloths")
+
   
 
-
-    const foodInput=document.getElementById('food-input');
-    const foodInputNumber=parseFloat(foodInput.value);
-
-    const rentInput=document.getElementById('rent-input');
-    const rentInputNumber = parseFloat(rentInput.value);
+ // get all the inputs and make input a number   
+    getInput("income")
     
-    const clothsInput=document.getElementById('cloths-input');
-    const clothsInputNumber = parseFloat(clothsInput.value);
+    getInput('food')
+
+    getInput('rent')
+   
+    getInput('cloths')
 
 
     // calculate expenses
 
-    const expensesInput = foodInputNumber+rentInputNumber+clothsInputNumber;
+    const expensesInput = getInput('food')+getInput('rent')+getInput('cloths')
     const expenses=  document.getElementById('expenses');
     expenses.innerText=expensesInput;
     
 
     //calculate  balance 
-
-    const balanceInput =incomeInputNumber-expensesInput;
+   
+    const balanceInput = getInput('income')-expensesInput;
     const balance = document.getElementById('balance');
     balance.innerText= balanceInput;
 
